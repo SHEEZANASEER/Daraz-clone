@@ -12,21 +12,67 @@
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body style="background-color: rgb(226, 222, 222)">
+
     <header>
-      <div class="class=navbar navbar-default">
         <div class="top-bar">
           <div class="d-flex gap-2">
             <nav
               class="d-flex justify-content-between align-items-center flex-nowrap overflow-auto w-100">
-              <span class="text-nowrap topbar-text">SAVE MORE ON APP</span>
-              <span class="text-nowrap topbar-text">SELL ON DARAZ</span>
+              <span class="text-nowrap topbar-text" >
+              <a  class="nav-link " href="https://play.google.com/store/apps/details?spm=a2a0e.tm80335142.footer_top.android.71ed4076OeaOt3&id=com.daraz.android&scm=1003.4.icms-zebra-5029545-2832850.OTHER_5370750400_2485531"> SAVE MORE ON APP</a> 
+              </span>
+              <span class="text-nowrap topbar-text">
+<a  class="nav-link " href="https://www.daraz.pk/sell-on-daraz/"> SELL ON DARAZ</a> 
+              </span>             
               <span class="text-nowrap topbar-text">HELP & SUPPORT</span>
-              <span class="text-nowrap topbar-text">LOGIN</span>
-              <span class="text-nowrap topbar-text">SIGN UP</span>
+
+
+              <span class="text-nowrap topbar-text">
+                <button class="login-btn" data-bs-toggle="modal" data-bs-target="#login" style="background:none; border:none; color:white;"> LOGIN</button>
+              </span>
+<!-- Modal -->
+<div class="modal fade" id="login">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3">
+      <h5>Login</h5>
+      <input type="text" class="form-control mb-2" placeholder="Email">
+      <input type="password" class="form-control mb-2" placeholder="Password">
+      <button class="btn w-100 mt-2"
+        style="background-color:#F85606; color:white; border:none;"
+           onmouseover="this.style.backgroundColor='#d94d05'" 
+        onmouseout="this.style.backgroundColor='#F85606'">
+        Login
+      </button>
+    </div>
+  </div>
+</div>
+
+              <span class="text-nowrap topbar-text">
+              <button class="sign-up-btn"data-bs-toggle="modal" data-bs-target="#signup" style="background:none; border:none; color:white;"  > SIGN UP</button>
+              </span>  
+              <!-- !-- Modal --> 
+<div class="modal fade" id="signup">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3">
+      <h5>SIGN UP</h5>
+      <input type="text" class="form-control mb-2" placeholder="First name">
+      <input type="text" class="form-control mb-2" placeholder="Last name">
+      <input type="text" class="form-control mb-2" placeholder="Email">
+      <input type="text" class="form-control mb-2" placeholder="Phone Number">
+      <input type="password" class="form-control mb-2" placeholder="Password">
+      <button class="btn w-100 mt-2"
+        style="background-color:#F85606; color:white; border:none;"
+           onmouseover="this.style.backgroundColor='#d94d05'" 
+        onmouseout="this.style.backgroundColor='#F85606'">
+        SIGN UP
+      </button>
+    </div>
+  </div>
+</div>
+              
               <span class="text-nowrap topbar-text">زبان تبدیل کریں</span>
             </nav>
           </div>
-        </div>
       </div>
 
       <div class="second-bar py-2">

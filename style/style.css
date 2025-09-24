@@ -1,20 +1,14 @@
-/* *{
-    padding: 0;
-    margin: 0;
-    font-family: Arial,sans-serif;
-    box-sizing: border-box;
+*{
+    
     /* outline: 2px solid black; */
-/* }
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden; 
-} */ 
+}
+
+
+body {
+  overflow-x: hidden; /* 🚫 removes horizontal scroll */
+}
 
 .top-bar{
-    cursor: pointer;
     background-color: #f85606;
     color: white;
     height: 27px;
@@ -28,8 +22,7 @@ html, body {
   text-decoration: none;
 }
 .topbar-text {
-  margin: 0 12px;   /* default desktop */
-  /* font-size: 16px; */
+  margin: 0 12px;  
 }
 
 .second-bar{
@@ -38,38 +31,41 @@ html, body {
 }
 
 .logo{
-    max-height: 70px;
+    height: 70px;
 }
 
-.search-bar{
-    height: 40px;
-}
-@media (max-width: 1050px) {
+.form-control { height:55px; }
+.search{height: 55px;}
+
+@media (max-width: 1240px) {
   .top-bar { height: 27px; }
  .second-bar { height: 80px; }
-  .logo { height: 70px; }
- .search-bar { height: 50px; }
-
-
+  .logo { height: 70px;     margin-right: 90px;}
+ .form-control { height:60px; }
+.search{height: 60px;}
 }
 
-@media (max-width: 750px) {
+@media (max-width: 850px) {
   .top-bar { height: 17px; }
-    .second-bar { height: 70px; }
-      .logo { height: 40px; }
- .search-bar { height:10px; }
-
-
+  .second-bar { height: 70px; }
+  .logo { height: 40px;    margin-right: 70px;}
+  .form-control { height:40px; }
+  .search{height: 40px;}
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   .top-bar { height: 10px; }
     .second-bar { height: 60px; }
-      .logo { height: 30px; }
- .search-bar { height:20px;  padding-top: -10px;}
-
+    .logo { height: 25px;margin-right: 70px }
+ .form-control { height:30px; }
+.search{max-height:30px;}
 
 }
+@media (max-width: 425px) {
+      .logo { height: 25px;margin-right: 30px; }
+
+}
+/*NAVBAR DONE*/
 
 
 

@@ -368,25 +368,6 @@ body {
 }
 
 
-
-/* .btn{
-    padding: 10px;
-    margin:4px;
-}
-.load-btn{
-    position: relative;
-    top: -1px;
-    right: -27%;
-    height:50px;
-    width:520px;
-    background-color:rgb(226, 222, 222);
-    border:2px solid rgb(63, 63, 216);
-    font-size: 24px;
-    color: rgb(63, 63, 216);
-    cursor: pointer;
-} */
-
-
 .load-btn {
   align-items: center;
   justify-content: center;
@@ -423,10 +404,195 @@ body {
 }
 
 
+/* CSS - paste into your stylesheet */
+:root{
+  --purple: rgb(48,24,98);
+  --accent: orangered;
+  --footer-bg:rgb(226, 222, 222); /* adjust background if needed */
+  --btn-bg: #000;
+  --btn-radius: 6px;
+  --max-width: 1200px;
+  --gap: 36px;
+}
+
+.site-footer{
+  background: var(--footer-bg);
+  padding: 48px 20px;
+  color: var(--purple);
+  font-family: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.footer-inner{
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  gap: var(--gap);
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap; /* let columns wrap on smaller screens */
+}
+
+/* Column base */
+.footer-column{
+  min-width: 220px; /* keeps columns readable */
+  flex: 1 1 260px;  /* grow, shrink, base width */
+}
+
+/* Lists */
+.footer-column h3{
+  font-size: 34px;
+  margin: 0 0 14px 0;
+  font-weight: 700;
+  color: var(--purple);
+}
+
+.footer-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.8;
+  font-size: 15px;
+  color: var(--purple);
+}
+
+/* App column specifics */
+.footer-apps{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* top area with icon and text */
+.app-top{
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.brand-icon{
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #dff; /* subtle bg like screenshot (adjust or remove) */
+}
+
+/* "Happy Shopping" and "Download App" */
+.app-text .happy{
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 600;
+}
+.app-text .download{
+  color: #000;
+  font-size: 16px;
+}
+
+/* Buttons row */
+.app-buttons{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* individual app button */
+.app-btn{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: var(--btn-bg);
+  color: #fff;
+  text-decoration: none;
+  border-radius: var(--btn-radius);
+  min-width: 150px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+/* icon inside button */
+.app-btn img{
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+/* text inside button: small line and big line */
+.app-btn-text{
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  text-align: left;
+}
+.app-btn-text small{
+  font-size: 11px;
+  opacity: 0.9;
+}
+.app-btn-text span{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px){
+  .footer-inner{
+    gap: 24px;
+    padding-bottom: 8px;
+  }
+  .footer-column{
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .footer-column h3{
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .brand-icon{
+    width: 50px;
+    height: 50px;
+  }
+
+  .app-btn{
+    min-width: 220px;
+  }
+}
+
+@media (max-width: 480px){
+  .site-footer{
+    padding: 28px 12px;
+  }
+  .footer-inner{
+    gap: 18px;
+  }
+  .footer-column h3{
+    font-size: 22px;
+  }
+  .app-btn{
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .app-buttons{
+    flex-direction: column;
+    width: 100%;
+  }
+  .app-btn img{
+    width: 34px;
+    height: 34px;
+  }
+  .app-btn-text span{ font-size: 16px; }
+  .footer-list{ font-size: 14px; }
+}
 
 
 
-.customer-care{
+
+
+
+/* .customer-care{
     margin-left: 43px;
     margin-top: 10px;
     line-height: 1.6;
@@ -447,7 +613,7 @@ body {
 /* ---------- MEDIA QUERIES ---------- */
 
 /* Large tablets and laptops */
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .daraz {
     margin-left: 100px;
     font-size: 14px;
@@ -465,7 +631,7 @@ body {
 }
 
 /* Tablets */
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .daraz {
     margin: 20px;
     font-size: 14px;
@@ -503,10 +669,10 @@ body {
     margin-left: 40px;
     text-align: left;
   }
-}
+} */
 
 /* Large phones */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .daraz {
     margin: 15px;
     font-size: 13px;
@@ -530,10 +696,10 @@ body {
   .app-btn-text2 p {
     font-size: 18px;
   }
-}
+} */ */
 
 /* Small phones */
-@media (max-width: 400px) {
+/* @media (max-width: 400px) {
   .daraz {
     margin: 10px;
     font-size: 12px;
@@ -655,10 +821,10 @@ body {
    top:-40px;
    right: -20px;
 
-}
+} */
 
 
-.payment-methods{
+/* .payment-methods{
     height: 160px;
     background-color: white;
   margin-top: 45px;
@@ -670,9 +836,9 @@ body {
     position: relative;
     top:-40px;
     left: 35px;
-}
+} */ 
 
-.verified{
+/* .verified{
     position: relative;
     top:-197px;
     left: 50%;
@@ -684,7 +850,100 @@ body {
     position: relative;
     top:-40px;
     left: 40px;
+} */
+
+
+.payment-methods {
+  background-color: #fff;
+  margin-top: 45px;
+  padding: 30px 5%;
+  border-top: 1px solid #eee;
 }
+
+.payment-container {
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+
+}
+
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #002B5B;
+}
+
+.pay-img {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.pay-img img {
+  height: 40px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.pay-img img:hover {
+  transform: scale(1.1);
+}
+
+.verified {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.verified img {
+  height: 45px;
+  width: auto;
+  margin-top: 10px;
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 992px) {
+  .payment-container {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .pay-block,
+  .verified {
+    align-items: center;
+  }
+
+  .title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .pay-img img {
+    height: 32px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .payment-methods {
+    padding: 20px;
+  }
+}
+
+
+
+
+
+
 
 .info{
     padding: 15px;

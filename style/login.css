@@ -1,115 +1,82 @@
-
-.top-bar{
-  display: flex;
-  align-items: center;
-   flex-wrap: wrap;
-  justify-content: flex-end;
-    background-color: #f85606;
-    color: white;
-    height: 27px;
-    padding-top: 2px;
-    padding-right: 4px;
-    font-size: 15px;
-    gap: 19px;
-    cursor: pointer;
-
+.payment-methods {
+  background-color: #fff;
+  margin-top: 45px;
+  padding: 30px 5%;
+  border-top: 1px solid #eee;
 }
 
-#nav-link-app{
-  text-decoration: none;
-}
-
-.second-bar {
-  background-color: #f85606;
-  height: 80px;
+.payment-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.logo img {
-  height: 60px;
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #002B5B;
 }
 
-.search-container {
+.pay-img {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   align-items: center;
-  flex: 1;
-  justify-content: center;
 }
 
-.search-container input {
-  width: 60%;
-  max-width: 600px;
-  padding: 10px;
-  border: none;
-  border-radius: 10px 0 0 10px;
-  outline: none;
-  font-size: 15px;
+.pay-img img {
+  height: 40px;
+  width: auto;
+  transition: transform 0.3s ease;
 }
 
-.search-container button {
-  background: #FF6600;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 0 10px 10px 0;
-  cursor: pointer;
+.pay-img img:hover {
+  transform: scale(1.1);
 }
 
-.search-container i {
-  color: white;
-  font-size: 16px;
+.verified {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
-
-@media (max-width: 768px) {
-  .second-bar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
-  .search-container {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .search-container input {
-    width: 80%;
-  }
+.verified img {
+  height: 45px;
+  width: auto;
+  margin-top: 10px;
 }
 
+/* ✅ Responsive Adjustments */
 @media (max-width: 992px) {
-  .top-bar {
-    gap: 10px;
-    font-size: 13px;
+  .payment-container {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .pay-block,
+  .verified {
+    align-items: center;
+  }
+
+  .title {
+    text-align: center;
   }
 }
 
 @media (max-width: 600px) {
-  .top-bar {
-    gap: 8px;
-        font-size: 12px;
-        flex-wrap: wrap;
-  }
-}
-
-  @media (max-width: 500px) {
-  .top-bar {
-    gap: 6px;
-        font-size: 11px;
-        flex-wrap: wrap;
-        white-space: nowrap;
+  .pay-img img {
+    height: 32px;
   }
 
-}
-  @media (max-width: 400px) {
-  .top-bar {
-    gap: 5px;
-        font-size: 8px;
-        flex-wrap: wrap;
-        white-space: nowrap;
+  .title {
+    font-size: 18px;
   }
 
+  .payment-methods {
+    padding: 20px;
+  }
 }
